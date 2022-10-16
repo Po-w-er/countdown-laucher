@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    min-height: 70vh;
+    font-family: 'Red Hat Text', sans-serif;
+    color: white;
+    background: url("images/bg-stars.svg") 0 0 no-repeat fixed;
+    height: 100%;
+    overflow: hidden;
+    background-color: hsl(235, 16%, 14%);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100px;
+     width: 100px;
+     border-radius: 8px;
+     background: conic-gradient( hsl(236, 21%, 20%) 0deg 90deg, hsl(236, 21%, 26%) 90deg 270deg,  hsl(236, 21%, 20%) 270deg 360deg );
+     box-shadow: 0px 12px 5px  hsla(235, 18%, 12%, 0.703), 0px -2px 2px  hsla(235, 18%, 12%, 0.703);
+     position: relative;
+     text-align: center;
+     color:  hsl(345, 95%, 68%);
+}
+
+h1{
+    font-size:  medium;
+    font-weight: bold;
+}
+
+.timer-section{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    height: 150px;
+}
+.number{
+    
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+}
+
+
+.number:after{
+    position: absolute;
+    content: " ";
+    width: 6%;
+    height: 10%;
+    background: hsl(340, 4%, 10%);
+    left: 0px;
+    top: 44%;
+    border-radius: 10% 100% 100% 10%;
+}
+
+.number:before{
+    position: absolute;
+    content: " ";
+    width: 6%;
+    height: 10%;
+    background: hsl(340, 4%, 10%);
+    right: 0px;
+    top: 44%;
+    border-radius: 50% 10% 10% 50%;
+}
+span{
+    color: white;
+    font-weight: 600;
+    font-size: x-small;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+   
+    bottom:0px;
+    height: 150px;
+    width: 100%;
+    background-image: url('images/pattern-hills.svg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.social-icons{
+    margin-top: 2em;
+    letter-spacing: 20px;
+}
+
+svg{
+    cursor: pointer;
+}
+
+svg  .icon:hover{
+    fill:  hsl(345, 95%, 68%) ;
+}
+
+
+@media(max-width:500px){
+    h1{
+        font-size: small;
+        text-align: center;
+    }
+    
+   .timer-section{
+     width: 100%;
+   }
+
+   .container{
+     width: 80px ;
+     height: 50%;
+   }
+
+   .number{
+        font-size: medium;
+   }
+
+   span{
+        font-size: 5px;
+   }
+}
+
+@media (max-width: 377px) {
+    .container{
+    width: 50px ;
+    height: 30%;
+  }
+
+  svg{
+    width: 10;
+  }
+ 
+  footer{
+    position:fixed;
+   
+    bottom:0px;
+    height: 20%;
+    width: 100%;
+    background-image: url('images/pattern-hills.svg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+    
+}
